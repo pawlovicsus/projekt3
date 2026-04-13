@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        const startNumberStr = prompt("podaj liczbę:");
+        const startNumber = parseInt(startNumberStr);
+
+        if (isNaN(startNumber)) {
+            console.log("błąd");
+        } else {
+            const sequence = [];
+            let currentNumber = startNumber;
+            const numberOfElements = 10;
+
+        for (let i = 0; i < numberOfElements; i++) {
+            sequence.push(currentNumber);
+            currentNumber = currentNumber * currentNumber;
+        }
+
+        sequence.forEach((number, index) => {
+            console.log(`liczba ${index + 1} = ${number}`);
+        });
+    }
+    </script>
+</body>
+</html>
